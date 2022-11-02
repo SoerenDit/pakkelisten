@@ -9,7 +9,6 @@ function Content() {
   const [trip, setTrip] = useState("");
   const [days, setDays] = useState(0);
 
-
   return (
     <>
         <Typography> Hvor mange dage er du væk?</Typography>
@@ -21,13 +20,15 @@ function Content() {
         ></Input>
         <Typography>Hvilken type rejse skal du på?</Typography>
         <Dropdown
+          label="Rejsetype"
+          choices={["Vandretur", "Cykeltur", "Bytur"]}
           onChange={(value) => {
             setTrip(value);
           }}
         ></Dropdown>
 
         <Typography>
-          Hav en god {trip ? trip : "tur"}! Nyd alle dine {days ? days : ""}{" "}
+          Hav en god {trip ? trip.toLowerCase() : "tur"}! Nyd alle dine {days ? days : ""}{" "}
           dage. Medbring {days * 1} par sokker og {Math.floor(days * 0.3)} t-shirts.
         </Typography>
     </>

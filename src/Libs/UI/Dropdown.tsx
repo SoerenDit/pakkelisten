@@ -10,6 +10,8 @@ import styled from "styled-components";
 
 interface Props {
   onChange: (value: string) => void;
+  label: string;
+  choices: string[];
 }
 
 function Dropdown(props: Props) {
@@ -21,14 +23,14 @@ function Dropdown(props: Props) {
   };
 
   const Container = styled.div`
-      margin: 10px 0px 10px 0px;
-      color: red;
+    margin: 10px 0px 10px 0px;
+    color: red;
   `;
 
   return (
     <Container>
       <FormControl fullWidth>
-        <InputLabel id="simple-select-label">Rejsetyper</InputLabel>
+        <InputLabel id="simple-select-label">{props.label}</InputLabel>
         <Select
           labelId="simple-select-label"
           id="simple-select"
@@ -36,9 +38,9 @@ function Dropdown(props: Props) {
           label="TravelType"
           onChange={handleChange}
         >
-          <MenuItem value={"vandretur"}>Vandretur</MenuItem>
-          <MenuItem value={"cykeltur"}>Cykeltur</MenuItem>
-          <MenuItem value={"bytur"}>Bytur</MenuItem>
+          {props.choices.map((choice) => (
+            <MenuItem value={choice}>{choice}</MenuItem>
+          ))}
         </Select>
       </FormControl>
     </Container>
