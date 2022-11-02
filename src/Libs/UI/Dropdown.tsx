@@ -9,7 +9,7 @@ import { useState } from "react";
 import styled from "styled-components";
 
 interface Props {
-  onChange: () => void;
+  onChange: (value: string) => void;
 }
 
 function Dropdown(props: Props) {
@@ -17,6 +17,7 @@ function Dropdown(props: Props) {
 
   const handleChange = (event: SelectChangeEvent<string>) => {
     setValue(event.target.value);
+    props.onChange(event.target.value);
   };
 
   const Container = styled.div`
@@ -34,9 +35,9 @@ function Dropdown(props: Props) {
           label="TravelType"
           onChange={handleChange}
         >
-          <MenuItem value={1}>Vandretur</MenuItem>
-          <MenuItem value={2}>Cykeltur</MenuItem>
-          <MenuItem value={3}>Bytur</MenuItem>
+          <MenuItem value={"vandretur"}>Vandretur</MenuItem>
+          <MenuItem value={"cykeltur"}>Cykeltur</MenuItem>
+          <MenuItem value={"bytur"}>Bytur</MenuItem>
         </Select>
       </FormControl>
     </Container>

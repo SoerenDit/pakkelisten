@@ -1,7 +1,10 @@
+import { useState } from "react";
 import Dropdown from "./Libs/UI/Dropdown";
 import Input from "./Libs/UI/Input";
 
 function App() {
+  const [trip, setTrip] = useState("");
+
   return (
     <>
       <div> Hvor mange dage er du væk?</div>
@@ -9,10 +12,10 @@ function App() {
       <div>
         Hvilken type rejse skal du på?
       </div>
-      <Dropdown onChange={() => {}}></Dropdown>
+      <Dropdown onChange={(value) => {setTrip(value)}}></Dropdown>
 
       <div>
-        Her er listen.
+        Hav en god {trip? trip : "tur"}!
       </div>
     </>
   );
