@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 interface Props {
   text: string;
-  onChange: (value: string) => void;
+  onChange: (value: number) => void;
 }
 
 const Container = styled.div`
@@ -13,7 +13,7 @@ const Container = styled.div`
 function Input(props: Props) {
     
   const handleChange = (event: { target: { value: string; }; }) => {
-    props.onChange(event.target.value);
+    props.onChange(parseInt(event.target.value));
   };
 
   return (

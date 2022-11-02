@@ -7,7 +7,7 @@ import Input from "./Input";
 function Content() {
     
   const [trip, setTrip] = useState("");
-  const [days, setDays] = useState("");
+  const [days, setDays] = useState(0);
 
 
   return (
@@ -28,7 +28,7 @@ function Content() {
 
         <Typography>
           Hav en god {trip ? trip : "tur"}! Nyd alle dine {days ? days : ""}{" "}
-          dage.
+          dage. Medbring {days * 1} par sokker og {Math.floor(days * 0.3)} t-shirts.
         </Typography>
     </>
   );
