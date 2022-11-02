@@ -1,29 +1,18 @@
-import { useState } from "react";
-import Dropdown from "./Libs/UI/Dropdown";
-import Input from "./Libs/UI/Input";
+import styled from "styled-components";
+import Content from "./Libs/UI/Content";
 
 function App() {
-  const [trip, setTrip] = useState("");
-  const [days, setDays] = useState("");
+
+  const Container = styled.div`
+    margin: auto;
+    max-width: 400px;
+    padding: 100px 20px 10px 20px;
+  `;
 
   return (
-    <>
-      <div> Hvor mange dage er du væk?</div>
-      <Input
-        onChange={(value) => {
-          setDays(value);
-        }}
-        text="Antal dage"
-      ></Input>
-      <div>Hvilken type rejse skal du på?</div>
-      <Dropdown
-        onChange={(value) => {
-          setTrip(value);
-        }}
-      ></Dropdown>
-
-      <div>Hav en god {trip ? trip : "tur"}! Nyd alle dine {days ? days : ""} dage.</div>
-    </>
+      <Container>
+        <Content />
+      </Container>
   );
 }
 
