@@ -9,6 +9,7 @@ function Content() {
   const [trip, setTrip] = useState("");
   const [days, setDays] = useState("");
 
+
   return (
     <>
         <Typography> Hvor mange dage er du væk?</Typography>

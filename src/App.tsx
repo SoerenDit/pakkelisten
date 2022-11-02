@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { ThemeProvider } from "./Libs/Features/Theme";
 import Content from "./Libs/UI/Content";
 
-function App() {
 
+function App() {
   const Container = styled.div`
     margin: auto;
     max-width: 400px;
@@ -10,9 +11,11 @@ function App() {
   `;
 
   return (
+    <ThemeProvider value={"main"}>
       <Container>
         <Content />
       </Container>
+    </ThemeProvider>
   );
 }
 
