@@ -1,5 +1,6 @@
 import { Typography } from "@mui/material";
 import { useState } from "react";
+import CheckboxList from "./CheckboxList";
 import Dropdown from "./Dropdown";
 import Input from "./Input";
 
@@ -31,6 +32,7 @@ function Content() {
           Hav en god {trip ? trip.toLowerCase() : "tur"}! Nyd alle dine {days ? days : ""}{" "}
           dage. Medbring {days * 1} par sokker og {Math.floor(days * 0.3)} t-shirts.
         </Typography>
+        <CheckboxList></CheckboxList>
     </>
   );
 }

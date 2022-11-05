@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "name": "par sokker",
+      "factor": 1,
+      "additional": 0
+    },
+    {
+      "name": "t-shirt",
+      "factor": 0.5,
+      "additional": 0
+    },
+    {
+      "name": "tandbørste",
+      "factor": 0,
+      "additional": 1
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import { ThemeProvider } from "./Libs/Features/Theme";
 import Content from "./Libs/UI/Content";
 
 
-function App() {
+export default function App() {
   const Container = styled.div`
     margin: auto;
     max-width: 400px;
@@ -19,4 +19,3 @@ function App() {
   );
 }
 
-export default App;
