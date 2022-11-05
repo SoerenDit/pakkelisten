@@ -1,0 +1,28 @@
+{
+    "items": [{
+            "name": "par sokker",
+            "factor": 1,
+            "additional": 0
+        },
+        {
+            "name": "T-shirts",
+            "factor": 0.5,
+            "additional": 0
+        },
+        {
+            "name": "Tandbørste",
+            "factor": 0,
+            "additional": 1
+        },
+        {
+            "name": "Tandpasta",
+            "factor": 0.02,
+            "additional": 1
+        },
+        {
+            "name": "Underbukser",
+            "factor": 1,
+            "additional": 0
+        }
+    ]
+}

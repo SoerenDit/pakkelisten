@@ -1,18 +1,5 @@
 {
-    "items": [{
-            "name": "par sokker",
-            "factor": 1,
-            "additional": 0
-        },
-        {
-            "name": "T-shirt",
-            "factor": 0.5,
-            "additional": 0
-        },
-        {
-            "name": "Tandbørste",
-            "factor": 0,
-            "additional": 1
-        }
-    ]
+    "maxWidth": "400px",
+    "borderRadius": "4px",
+    "elementMargins": "100px 0px 10px 0px"
 }
