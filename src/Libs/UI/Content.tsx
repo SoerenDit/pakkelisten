@@ -32,7 +32,7 @@ function Content() {
           Hav en god {trip ? trip.toLowerCase() : "tur"}! Nyd alle dine {days ? days : ""}{" "}
           dage. Medbring {days * 1} par sokker og {Math.floor(days * 0.3)} t-shirts.
         </Typography>
-        <CheckboxList></CheckboxList>
+        <CheckboxList days={days}></CheckboxList>
     </>
   );
 }

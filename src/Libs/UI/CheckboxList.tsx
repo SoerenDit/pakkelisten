@@ -9,7 +9,11 @@ import IconButton from '@mui/material/IconButton';
 import CommentIcon from '@mui/icons-material/Comment';
 import configuration from '../Features/configuration.json';
 
-export default function CheckboxList() {
+interface Props {
+  days: number;
+}
+
+export default function CheckboxList(props: Props) {
   const [checked, setChecked] = React.useState([0]);
 
   const handleToggle = (value: number) => () => {
@@ -28,11 +32,11 @@ export default function CheckboxList() {
   return (
     <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       {configuration.items.map((item, index) => {
-        const labelId = `checkbox-list-label-${item}`;
+        const labelId = `checkbox-list-label-${item.name}`;
 
         return (
           <ListItem
-            key={item}
+            key={index}
             secondaryAction={
               <IconButton edge="end" aria-label="comments">
                 <CommentIcon />
@@ -50,7 +54,7 @@ export default function CheckboxList() {
                   inputProps={{ 'aria-labelledby': labelId }}
                 />
               </ListItemIcon>
-              <ListItemText id={labelId} primary={`Line item ${item}`} />
+              <ListItemText id={labelId} primary={`${Math.floor(props.days * item.factor + item.additional)} x ${item.name}`} />
             </ListItemButton>
           </ListItem>
         );
