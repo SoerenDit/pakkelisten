@@ -29,8 +29,7 @@ function Content() {
         ></Dropdown>
 
         <Typography>
-          Hav en god {trip ? trip.toLowerCase() : "tur"}! Nyd alle dine {days ? days : ""}{" "}
-          dage. Medbring {days * 1} par sokker og {Math.floor(days * 0.3)} t-shirts.
+          Pakkeliste
         </Typography>
         <CheckboxList days={days}></CheckboxList>
     </>

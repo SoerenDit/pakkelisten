@@ -8,6 +8,9 @@ import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import CommentIcon from '@mui/icons-material/Comment';
 import configuration from '../Features/configuration.json';
+import itemSettings from '../Features/itemSettings.json';
+import styled from 'styled-components';
+
 
 interface Props {
   days: number;
@@ -29,9 +32,10 @@ export default function CheckboxList(props: Props) {
     setChecked(newChecked);
   };
 
+
   return (
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-      {configuration.items.map((item, index) => {
+    <List sx={{ width: '100%', maxWidth: configuration.maxWidth, bgcolor: 'background.paper', borderRadius: configuration.borderRadius, margin: "10px 0px", backgroundColor: "aliceblue" }}>
+      {itemSettings.items.map((item, index) => {
         const labelId = `checkbox-list-label-${item.name}`;
 
         return (

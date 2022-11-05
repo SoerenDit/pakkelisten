@@ -7,6 +7,8 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import styled from "styled-components";
+import configuration from '../Features/configuration.json';
+
 
 interface Props {
   onChange: (value: string) => void;
@@ -29,7 +31,7 @@ function Dropdown(props: Props) {
 
   return (
     <Container>
-      <FormControl fullWidth>
+      <FormControl fullWidth >
         <InputLabel id="simple-select-label">{props.label}</InputLabel>
         <Select
           labelId="simple-select-label"
