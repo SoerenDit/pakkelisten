@@ -7,7 +7,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import styled from "styled-components";
-import configuration from '../Features/configuration.json';
+import configuration from '../features/configuration.json';
 
 
 interface Props {

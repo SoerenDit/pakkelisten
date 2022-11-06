@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { ThemeProvider } from "./Libs/Features/Theme";
-import Content from "./Libs/UI/Content";
+import { ThemeProvider } from "./libs/features/Theme";
+import Content from "./libs/ui/Content";
 
 
 export default function App() {

@@ -7,8 +7,8 @@ import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import CommentIcon from '@mui/icons-material/Comment';
-import configuration from '../Features/configuration.json';
-import itemSettings from '../Features/itemSettings.json';
+import configuration from '../features/configuration.json';
+import itemSettings from '../features/itemSettings.json';
 import styled from 'styled-components';
 
 
