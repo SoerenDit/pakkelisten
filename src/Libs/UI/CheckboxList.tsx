@@ -9,7 +9,6 @@ import IconButton from '@mui/material/IconButton';
 import CommentIcon from '@mui/icons-material/Comment';
 import configuration from '../features/configuration.json';
 import itemSettings from '../features/itemSettings.json';
-import styled from 'styled-components';
 
 
 interface Props {
@@ -32,9 +31,8 @@ export default function CheckboxList(props: Props) {
     setChecked(newChecked);
   };
 
-
   return (
-    <List sx={{ width: '100%', maxWidth: configuration.maxWidth, bgcolor: 'background.paper', borderRadius: configuration.borderRadius, margin: "10px 0px", backgroundColor: "aliceblue" }}>
+    <List sx={{ width: '100%', maxWidth: configuration.maxWidth, borderRadius: configuration.borderRadius, margin: "10px 0px"}}>
       {itemSettings.items.map((item, index) => {
         const labelId = `checkbox-list-label-${item.name}`;
 
@@ -58,7 +56,7 @@ export default function CheckboxList(props: Props) {
                   inputProps={{ 'aria-labelledby': labelId }}
                 />
               </ListItemIcon>
-              <ListItemText id={labelId} primary={`${Math.floor(props.days * item.factor + item.additional)} x ${item.name}`} />
+              <ListItemText id={labelId} primaryTypographyProps={{fontSize: '16px'}} primary={`${Math.floor(props.days * item.factor + item.additional)} x ${item.name}`}  />
             </ListItemButton>
           </ListItem>
         );
