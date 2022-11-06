@@ -27,10 +27,6 @@ function Content() {
             setTrip(value);
           }}
         ></Dropdown>
-
-        <Typography>
-          Pakkeliste
-        </Typography>
         <CheckboxList days={days}></CheckboxList>
     </>
   );
