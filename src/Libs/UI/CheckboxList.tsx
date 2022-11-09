@@ -8,7 +8,7 @@ import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import CommentIcon from '@mui/icons-material/Comment';
 import configuration from '../features/configuration.json';
-import itemSettings from '../features/itemSettings.json';
+import items from '../features/items.json';
 import styled from 'styled-components';
 import { Typography } from '@mui/material';
 
@@ -44,7 +44,7 @@ export default function CheckboxList(props: Props) {
         Pakkeliste
       </Typography>
       <List sx={{ width: '100%', maxWidth: configuration.maxWidth, margin: "0px" }}>
-        {itemSettings.items.map((item, index) => {
+        {items.clothes.map((item, index) => {
           const labelId = `checkbox-list-label-${item.name}`;
 
           return (
@@ -73,6 +73,39 @@ export default function CheckboxList(props: Props) {
           );
         })}
       </List>
+      <Typography align="center" sx={{padding:"20px 0px 0px 0px", margin:"0px", fontWeight:"bold"}}>
+        Toilettaske
+      </Typography>
+      <List sx={{ width: '100%', maxWidth: configuration.maxWidth, margin: "0px" }}>
+        {items.toiletries.map((item, index) => {
+          const labelId = `checkbox-list-label-${item.name}`;
+
+          return (
+            <ListItem
+              key={index}
+              secondaryAction={
+                <IconButton edge="end" aria-label="comments">
+                  <CommentIcon />
+                </IconButton>
+              }
+              disablePadding
+            >
+              <ListItemButton role={undefined} onClick={handleToggle(index)} dense>
+                <ListItemIcon>
+                  <Checkbox
+                    edge="start"
+                    checked={checked.indexOf(index) !== -1}
+                    tabIndex={-1}
+                    disableRipple
+                    inputProps={{ 'aria-labelledby': labelId }}
+                  />
+                </ListItemIcon>
+                <ListItemText id={labelId} primaryTypographyProps={{ fontSize: '16px' }} primary={`${Math.floor(props.days * item.factor + item.additional)} x ${item.name}`} />
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
+        </List>
     </Container>
   );
 }

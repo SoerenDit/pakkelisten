@@ -1,0 +1,50 @@
+{
+    "clothes": [{
+            "name": "par sokker",
+            "factor": 1,
+            "additional": 0
+        },
+        {
+            "name": "Underbukser",
+            "factor": 1,
+            "additional": 0
+        },
+        {
+            "name": "T-shirts",
+            "factor": 0.5,
+            "additional": 0
+        },        
+        {
+            "name": "Varm trøje",
+            "factor": 0,
+            "additional": 1
+        },
+        {
+            "name": "Bukser",
+            "factor": 0.2,
+            "additional": 1
+        },
+        {
+            "name": "Håndklæde",
+            "factor": 0,
+            "additional": 1
+        },
+        {
+            "name": "Badebukser",
+            "factor": 0,
+            "additional": 1
+        }
+    ],
+    "toiletries": [
+        {
+            "name": "Tandbørste",
+            "factor": 0,
+            "additional": 1
+        },
+        {
+            "name": "Tandpasta",
+            "factor": 0.02,
+            "additional": 1
+        }
+    ]
+}
