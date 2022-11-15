@@ -90,7 +90,7 @@ export default function CheckboxList(props: Props) {
               }
               disablePadding
             >
-              <ListItemButton role={undefined} onClick={handleToggle(index)} dense>
+              <ListItemButton role={undefined} onClick={handleToggle(index+7)} dense>
                 <ListItemIcon>
                   <Checkbox
                     edge="start"
