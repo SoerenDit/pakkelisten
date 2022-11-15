@@ -82,7 +82,7 @@ export default function CheckboxList(props: Props) {
 
           return (
             <ListItem
-              key={index}
+              key={index+7}
               secondaryAction={
                 <IconButton edge="end" aria-label="comments">
                   <CommentIcon />
