@@ -94,7 +94,7 @@ export default function CheckboxList(props: Props) {
                 <ListItemIcon>
                   <Checkbox
                     edge="start"
-                    checked={checked.indexOf(index) !== -1}
+                    checked={checked.indexOf(index+7) !== -1}
                     tabIndex={-1}
                     disableRipple
                     inputProps={{ 'aria-labelledby': labelId }}
