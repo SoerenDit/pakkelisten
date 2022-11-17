@@ -2,49 +2,56 @@
     "clothes": [{
             "name": "par sokker",
             "factor": 1,
-            "additional": 0
+            "additional": 0,
+            "description": "Beskrivelse"
         },
         {
             "name": "Underbukser",
             "factor": 1,
-            "additional": 0
+            "additional": 0,
+            "description": "Hvis du vælger merino-underbukser kan du nøjes med at medbringe halvdelen"
         },
         {
             "name": "T-shirts",
             "factor": 0.5,
-            "additional": 0
+            "additional": 0,
+            "description": "Beskrivelse"
         },        
         {
             "name": "Varm trøje",
             "factor": 0,
-            "additional": 1
+            "additional": 1,
+            "description": "Beskrivelse"
         },
         {
             "name": "Bukser",
             "factor": 0.2,
-            "additional": 1
+            "additional": 1,
+            "description": "Beskrivelse"
         },
         {
             "name": "Håndklæde",
             "factor": 0,
-            "additional": 1
+            "additional": 1,
+            "description": "Beskrivelse"
         },
         {
             "name": "Badebukser",
             "factor": 0,
-            "additional": 1
-        }
-    ],
-    "toiletries": [
+            "additional": 1,
+            "description": "Det kan være rart med nogle badeshorts, man kan gå i selv hvis de er våde"
+        },
         {
             "name": "Tandbørste",
             "factor": 0,
-            "additional": 1
+            "additional": 1,
+            "description": "Beskrivelse"
         },
         {
             "name": "Tandpasta",
             "factor": 0.02,
-            "additional": 1
+            "additional": 1,
+            "description": "Beskrivelse"
         }
     ]
 }
