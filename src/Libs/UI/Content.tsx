@@ -7,6 +7,8 @@ import NumberPicker from "./NumberPicker";
 function Content() {
     
   const [trip, setTrip] = useState("");
+  const [weather, setWeather] = useState("");
+
   const [days, setDays] = useState(0);
 
   return (
@@ -19,6 +21,14 @@ function Content() {
           choices={["Vandretur", "Cykeltur", "Bytur"]}
           onChange={(value) => {
             setTrip(value);
+          }}
+        ></Dropdown>
+        <Typography>Hvordan er vejret, der hvor du skal hen?</Typography>
+        <Dropdown
+          label="Vejr"
+          choices={["Dansk forår", "Dansk sommer", "Dansk efterår", "Dansk vinter"]}
+          onChange={(value) => {
+            setWeather(value);
           }}
         ></Dropdown>
         <CheckboxList days={days} trip={trip}></CheckboxList>
