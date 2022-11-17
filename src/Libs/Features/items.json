@@ -1,7 +1,7 @@
 {
   "hike": [
     {
-      "name": "par sokker",
+      "name": "Par sokker",
       "factor": 1,
       "additional": 0,
       "description": "Beskrivelse"
@@ -81,6 +81,12 @@
         "factor": 0.02,
         "additional": 1,
         "description": "Beskrivelse"
+      },
+      {
+        "name": "Portvin",
+        "factor": 0.1,
+        "additional": 0,
+        "description": "Er det portvin?"
       }
   ]
 }
