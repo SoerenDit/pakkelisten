@@ -3,6 +3,7 @@ import { useState } from "react";
 import CheckboxList from "./CheckboxList";
 import Dropdown from "./Dropdown";
 import Input from "./Input";
+import NumberPicker from "./NumberPicker";
 
 
 function Content() {
@@ -13,12 +14,7 @@ function Content() {
   return (
     <>
         <Typography> Hvor mange dage er du væk?</Typography>
-        <Input
-          onChange={(value) => {
-            setDays(value);
-          }}
-          text="Antal dage"
-        ></Input>
+        <NumberPicker value={days} onChange={(n: number) => setDays(n)}></NumberPicker>
         <Typography>Hvilken type rejse skal du på?</Typography>
         <Dropdown
           label="Rejsetype"
