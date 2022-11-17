@@ -7,7 +7,6 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import styled from "styled-components";
-import configuration from '../features/configuration.json';
 
 
 interface Props {
@@ -40,8 +39,8 @@ function Dropdown(props: Props) {
           label="TravelType"
           onChange={handleChange}
         >
-          {props.choices.map((choice) => (
-            <MenuItem value={choice}>{choice}</MenuItem>
+          {props.choices.map((choice, index) => (
+            <MenuItem value={choice} key={index}>{choice}</MenuItem>
           ))}
         </Select>
       </FormControl>
