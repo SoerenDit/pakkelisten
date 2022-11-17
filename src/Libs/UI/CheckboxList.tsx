@@ -17,10 +17,11 @@ import { useState } from 'react';
 
 interface Props {
   days: number;
+  trip: string;
 }
 
 export default function CheckboxList(props: Props) {
-  const [checked, setChecked] = useState([0]);
+  const [checked, setChecked] = useState([-1]);
   const [openDialog, setOpenDialog] = useState(-1);
 
   const handleToggle = (value: number) => () => {
@@ -41,22 +42,31 @@ export default function CheckboxList(props: Props) {
    border-radius: 4px;
 `;
 
+  let toPack: { name: string; factor: number; additional: number; description: string; }[];
+
+  if(props.trip === "Vandretur") {
+    toPack = items.hike;
+  } else if (props.trip === "Cykeltur"){
+    toPack = items.cycling;
+  } else {
+    toPack = items.city;
+  }
 
   return (
     <Container>
-      <Typography align="center" sx={{padding:"20px 0px 0px 0px", margin:"0px", fontWeight:"bold"}}>
+      <Typography align="center" sx={{padding:"20px 0px 0px 0px", margin:"0px", fontWeight:"bold"}} onClick={() => console.log(props.trip)}>
         Pakkeliste
       </Typography>
       <List sx={{ width: '100%', maxWidth: configuration.maxWidth, margin: "0px" }}>
-        {items.clothes.map((item, index) => {
+        {toPack.map((item, index) => {
           const labelId = `checkbox-list-label-${item.name}`;
 
           return (
             <ListItem
               key={index}
               secondaryAction={
-                <IconButton edge="end" aria-label="comments">
-                  <ReadMoreIcon onClick={() => setOpenDialog(index)}/>
+                <IconButton edge="end" aria-label="comments" onClick={() => setOpenDialog(index)}>
+                  <ReadMoreIcon/>
                 </IconButton>
               }
               disablePadding

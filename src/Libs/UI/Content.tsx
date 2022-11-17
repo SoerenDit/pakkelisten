@@ -21,7 +21,7 @@ function Content() {
             setTrip(value);
           }}
         ></Dropdown>
-        <CheckboxList days={days}></CheckboxList>
+        <CheckboxList days={days} trip={trip}></CheckboxList>
     </>
   );
 }
