@@ -2,9 +2,7 @@ import { Typography } from "@mui/material";
 import { useState } from "react";
 import CheckboxList from "./CheckboxList";
 import Dropdown from "./Dropdown";
-import Input from "./Input";
 import NumberPicker from "./NumberPicker";
-
 
 function Content() {
     
