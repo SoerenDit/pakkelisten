@@ -6,6 +6,15 @@ import MyButton from "./MyButton";
 import NumberPicker from "./NumberPicker";
 import styled from "styled-components";
 
+const QuestionsContainer = styled.div<{showQuestions: boolean}>`
+    display: ${(props) => props.showQuestions? "block" : "none"};
+  `;
+
+const PackingListContainer = styled.div<{showPackingList: boolean}>`
+    display: ${(props) => props.showPackingList? "block" : "none"};
+
+  `;
+
 function Content() {
   const [trip, setTrip] = useState("");
   const [weather, setWeather] = useState("");
@@ -17,17 +26,9 @@ function Content() {
     setShowPackingList(!showPackingList);
   };
 
-  const QuestionsContainer = styled.div`
-    display: ${showPackingList? "none" : "block"};
-  `;
-
-  const PackingListContainer = styled.div`
-    display: ${showPackingList? "block" : "none"};
-  `;
-
   return (
     <>
-      <QuestionsContainer>
+      <QuestionsContainer showQuestions={!showPackingList}>
         <Typography> Hvor mange dage er du væk?</Typography>
         <NumberPicker
           value={days}
@@ -39,6 +40,7 @@ function Content() {
           choices={["Vandretur", "Cykeltur", "Bytur"]}
           onChange={(value) => {
             setTrip(value);
+            console.log(value);
           }}
         ></Dropdown>
         <Typography>Hvordan er vejret, der hvor du skal hen?</Typography>
@@ -56,7 +58,7 @@ function Content() {
         ></Dropdown>
         <MyButton text={"Generer pakkeliste"} onClick={handleClick} variant={"contained"}></MyButton>
       </QuestionsContainer>
-      <PackingListContainer>
+      <PackingListContainer showPackingList={showPackingList}>
         <MyButton text={"Tilbage"} onClick={handleClick} variant={"text"}></MyButton>
 
         <CheckboxList
