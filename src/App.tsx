@@ -3,13 +3,14 @@ import { ThemeProvider } from "./libs/features/Theme";
 import Content from "./libs/ui/Content";
 
 
-export default function App() {
-  const Container = styled.div`
+const Container = styled.div`
     margin: auto;
     max-width: 400px;
     padding: 20px 20px 10px 20px;
   `;
-
+  
+export default function App() {
+  
   return (
     <ThemeProvider value={"main"}>
       <Container>

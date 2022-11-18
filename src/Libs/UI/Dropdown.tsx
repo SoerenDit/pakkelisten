@@ -8,6 +8,10 @@ import {
 import { useState } from "react";
 import styled from "styled-components";
 
+const Container = styled.div`
+    margin: 10px 0px 10px 0px;
+    color: red;
+  `;
 
 interface Props {
   onChange: (value: string) => void;
@@ -22,11 +26,6 @@ function Dropdown(props: Props) {
     setValue(event.target.value);
     props.onChange(event.target.value);
   };
-
-  const Container = styled.div`
-    margin: 10px 0px 10px 0px;
-    color: red;
-  `;
 
   return (
     <Container>

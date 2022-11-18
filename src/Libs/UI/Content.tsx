@@ -12,7 +12,6 @@ const QuestionsContainer = styled.div<{showQuestions: boolean}>`
 
 const PackingListContainer = styled.div<{showPackingList: boolean}>`
     display: ${(props) => props.showPackingList? "block" : "none"};
-
   `;
 
 function Content() {
