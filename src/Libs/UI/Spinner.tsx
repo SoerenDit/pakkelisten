@@ -9,7 +9,6 @@ const Container = styled.div`
 `;
 
 function Input(props: Props) {
-
   return (
     <Container>
       <CircularProgress sx={{display: "block", margin: "auto"}}></CircularProgress>
