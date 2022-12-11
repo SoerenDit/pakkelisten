@@ -6,7 +6,7 @@ import Input from "./Input";
 
 
 function Content() {
-    
+
   const [trip, setTrip] = useState("");
   const [days, setDays] = useState(0);
 
